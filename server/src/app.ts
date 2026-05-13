@@ -1,16 +1,20 @@
 import express from "express";
 import cors from "cors";
+import authRouter from "./routes/auth.router";
+import { errorMiddleware } from "./middleware/error.middleware";
 
 const app = express();
 
 app.use(
    cors({
-      origin: "http://localhost:5173",
+      origin: process.env.CLIENT_URL,
       credentials: true,
    }),
 );
 
-app.use(express.json());
+app.use(express.json({ limit: '100kb' }));
+
+app.use("/api/auth", authRouter);
 
 app.get("/api/health", (_req, res) => {
    res.json({
@@ -24,5 +28,7 @@ app.use((_req, res) => {
       error: "Маршрут не знайдено",
    });
 });
+
+app.use(errorMiddleware);
 
 export default app;
