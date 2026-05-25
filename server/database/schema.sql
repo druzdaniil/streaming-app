@@ -22,16 +22,16 @@ CREATE TABLE IF NOT EXISTS transactions (
    subscription_id INTEGER NOT NULL REFERENCES subscriptions (subscription_id),
    started_at DATETIME NOT NULL DEFAULT (datetime ('now')),
    expires_at DATETIME NOT NULL,
-   status TEXT NOT NULL DEFAULT 'active'
+   status TEXT NOT NULL DEFAULT 'active' CHECK (status IN ('active', 'expired'))
 );
 
 CREATE TABLE IF NOT EXISTS content (
    content_id INTEGER PRIMARY KEY AUTOINCREMENT,
-   content_type TEXT NOT NULL,
+   content_type TEXT NOT NULL CHECK (content_type IN ('film', 'series')),
    title TEXT NOT NULL,
    release_year INTEGER NOT NULL,
    description TEXT,
-   rating REAL DEFAULT 0,
+   rating REAL DEFAULT 0 CHECK (rating BETWEEN 0 AND 10),
    poster_url TEXT
 );
 
@@ -49,7 +49,8 @@ CREATE TABLE IF NOT EXISTS seasons (
    season_id INTEGER PRIMARY KEY AUTOINCREMENT,
    series_id INTEGER NOT NULL REFERENCES series (series_id) ON DELETE CASCADE,
    season_number INTEGER NOT NULL,
-   title TEXT
+   title TEXT,
+   UNIQUE (series_id, season_number)
 );
 
 CREATE TABLE IF NOT EXISTS episodes (
@@ -58,7 +59,8 @@ CREATE TABLE IF NOT EXISTS episodes (
    episode_number INTEGER NOT NULL,
    title TEXT NOT NULL,
    duration INTEGER,
-   video_url TEXT
+   video_url TEXT,
+   UNIQUE (season_id, episode_number)
 );
 
 CREATE TABLE IF NOT EXISTS genres (
@@ -108,3 +110,7 @@ CREATE TABLE IF NOT EXISTS reviews (
    created_at DATETIME NOT NULL DEFAULT (datetime ('now')),
    UNIQUE (user_id, content_id)
 );
+
+CREATE INDEX IF NOT EXISTS idx_content_rating ON content (rating DESC);
+
+CREATE INDEX IF NOT EXISTS idx_content_type ON content (content_type);
