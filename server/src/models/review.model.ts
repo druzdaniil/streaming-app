@@ -47,6 +47,27 @@ export function createReview(data: { user_id: number; content_id: number; text: 
    return result.lastInsertRowid as number;
 }
 
+export function getReviewById(reviewId: number): ReviewPublic | undefined {
+   return db
+      .prepare(
+         `
+    SELECT
+      r.review_id,
+      r.user_id,
+      r.content_id,
+      r.text,
+      r.rating,
+      r.created_at,
+      u.first_name,
+      u.last_name
+    FROM reviews r
+    INNER JOIN users u ON r.user_id = u.user_id
+    WHERE r.review_id = ?
+  `,
+      )
+      .get(reviewId) as ReviewPublic | undefined;
+}
+
 export function deleteReview(reviewId: number, userId: number): boolean {
    const result = db
       .prepare(
