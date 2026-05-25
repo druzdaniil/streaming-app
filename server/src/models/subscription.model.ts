@@ -22,13 +22,22 @@ export function getSubscriptionById(id: number): Subscription | undefined {
 }
 
 export function getActiveTransaction(userId: number): Transaction | undefined {
+   db.prepare(
+      `
+    UPDATE transactions
+    SET status = 'expired'
+    WHERE user_id = ?
+      AND status = 'active'
+      AND expires_at <= datetime('now')
+  `,
+   ).run(userId);
+
    return db
       .prepare(
          `
     SELECT * FROM transactions
     WHERE user_id = ?
       AND status = 'active'
-      AND expires_at > datetime('now')
     ORDER BY started_at DESC
     LIMIT 1
   `,
