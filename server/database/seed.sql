@@ -1053,10 +1053,9 @@ INSERT INTO
    seasons (series_id, season_number, title)
 VALUES
    (17, 1, 'Сезон 1'),
-   (17, 2, 'Сезон 2');
-
-(17, 3, 'Сезон 3'),
-(17, 4, 'Сезон 4');
+   (17, 2, 'Сезон 2'),
+   (17, 3, 'Сезон 3'),
+   (17, 4, 'Сезон 4');
 
 INSERT INTO
    episodes (
@@ -1113,7 +1112,54 @@ VALUES
       'https://res.cloudinary.com/demo/video/upload/mrrobot_s2e2.mp4'
    );
 
--- Продовжити
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      3,
+      1,
+      'eps3.0_power-saver-mode.h',
+      53,
+      'https://res.cloudinary.com/demo/video/upload/mrrobot_s3e1.mp4'
+   ),
+   (
+      3,
+      2,
+      'eps3.1_undo.gz',
+      47,
+      'https://res.cloudinary.com/demo/video/upload/mrrobot_s3e2.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      4,
+      1,
+      '401 Unauthorized',
+      61,
+      'https://res.cloudinary.com/demo/video/upload/mrrobot_s4e1.mp4'
+   ),
+   (
+      4,
+      2,
+      '402 Payment Required',
+      48,
+      'https://res.cloudinary.com/demo/video/upload/mrrobot_s4e2.mp4'
+   );
+
 INSERT INTO
    content (
       content_id,
@@ -1144,12 +1190,11 @@ INSERT INTO
    seasons (series_id, season_number, title)
 VALUES
    (18, 1, 'Сезон 1'),
-   (18, 2, 'Сезон 2');
+   (18, 2, 'Сезон 2'),
+   (18, 3, 'Сезон 3'),
+   (18, 4, 'Сезон 4'),
+   (18, 5, 'Сезон 5');
 
-(18, 3, 'Сезон 3'),
-(18, 4, 'Сезон 4');
-
-(18, 5, 'Сезон 5'),
 INSERT INTO
    episodes (
       season_id,
@@ -1205,7 +1250,78 @@ VALUES
       'https://res.cloudinary.com/demo/video/upload/bb_s2e2.mp4'
    );
 
--- Продовжити
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      7,
+      1,
+      'No Más',
+      47,
+      'https://res.cloudinary.com/demo/video/upload/bb_s3e1.mp4'
+   ),
+   (
+      7,
+      2,
+      'Caballo sin Nombre',
+      48,
+      'https://res.cloudinary.com/demo/video/upload/bb_s3e2.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      8,
+      1,
+      'Різак для коробок',
+      47,
+      'https://res.cloudinary.com/demo/video/upload/bb_s4e1.mp4'
+   ),
+   (
+      8,
+      2,
+      'Тридцять вісім кирпатих',
+      46,
+      'https://res.cloudinary.com/demo/video/upload/bb_s4e2.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      9,
+      1,
+      'Живи вільно або помри',
+      43,
+      'https://res.cloudinary.com/demo/video/upload/bb_s5e1.mp4'
+   ),
+   (
+      9,
+      2,
+      'Мадригал',
+      46,
+      'https://res.cloudinary.com/demo/video/upload/bb_s5e2.mp4'
+   );
+
 INSERT INTO
    content (
       content_id,
@@ -1236,13 +1352,11 @@ INSERT INTO
    seasons (series_id, season_number, title)
 VALUES
    (19, 1, 'Сезон 1'),
-   (19, 2, 'Сезон 2');
-
-(19, 3, 'Сезон 3'),
-(19, 4, 'Сезон 4');
-
-(19, 5, 'Сезон 5'),
-(19, 6, 'Сезон 6');
+   (19, 2, 'Сезон 2'),
+   (19, 3, 'Сезон 3'),
+   (19, 4, 'Сезон 4'),
+   (19, 5, 'Сезон 5'),
+   (19, 6, 'Сезон 6');
 
 INSERT INTO
    episodes (
@@ -1292,7 +1406,102 @@ VALUES
       'https://res.cloudinary.com/demo/video/upload/bcs_s2e2.mp4'
    );
 
--- Продовжити
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      12,
+      1,
+      'Мейбл',
+      51,
+      'https://res.cloudinary.com/demo/video/upload/bcs_s3e1.mp4'
+   ),
+   (
+      12,
+      2,
+      'Свідок',
+      51,
+      'https://res.cloudinary.com/demo/video/upload/bcs_s3e2.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      13,
+      1,
+      'Дим',
+      49,
+      'https://res.cloudinary.com/demo/video/upload/bcs_s4e1.mp4'
+   ),
+   (
+      13,
+      2,
+      'Дихати',
+      45,
+      'https://res.cloudinary.com/demo/video/upload/bcs_s4e2.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      14,
+      1,
+      'Чарівник',
+      54,
+      'https://res.cloudinary.com/demo/video/upload/bcs_s5e1.mp4'
+   ),
+   (
+      14,
+      2,
+      'Знижка 50%',
+      46,
+      'https://res.cloudinary.com/demo/video/upload/bcs_s5e2.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      15,
+      1,
+      'Вино та Троянди',
+      60,
+      'https://res.cloudinary.com/demo/video/upload/bcs_s6e1.mp4'
+   ),
+   (
+      15,
+      2,
+      'Батіг і Пряник',
+      61,
+      'https://res.cloudinary.com/demo/video/upload/bcs_s6e2.mp4'
+   );
+
 INSERT INTO
    content (
       content_id,
@@ -1323,13 +1532,11 @@ INSERT INTO
    seasons (series_id, season_number, title)
 VALUES
    (20, 1, 'Сезон 1'),
-   (20, 2, 'Сезон 2');
-
-(20, 3, 'Сезон 3'),
-(20, 4, 'Сезон 4');
-
-(20, 5, 'Сезон 5'),
-(20, 6, 'Сезон 6');
+   (20, 2, 'Сезон 2'),
+   (20, 3, 'Сезон 3'),
+   (20, 4, 'Сезон 4'),
+   (20, 5, 'Сезон 5'),
+   (20, 6, 'Сезон 6');
 
 INSERT INTO
    episodes (
@@ -1386,7 +1593,102 @@ VALUES
       'https://res.cloudinary.com/demo/video/upload/pb_s2e2.mp4'
    );
 
--- Продовжити
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      18,
+      1,
+      'Епізод #3.1',
+      56,
+      'https://res.cloudinary.com/demo/video/upload/pb_s3e1.mp4'
+   ),
+   (
+      18,
+      2,
+      'Епізод #3.2',
+      57,
+      'https://res.cloudinary.com/demo/video/upload/pb_s3e2.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      19,
+      1,
+      'Петля',
+      60,
+      'https://res.cloudinary.com/demo/video/upload/pb_s4e1.mp4'
+   ),
+   (
+      19,
+      2,
+      'Язичники',
+      57,
+      'https://res.cloudinary.com/demo/video/upload/pb_s4e2.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      20,
+      1,
+      'Чорний вівторок',
+      56,
+      'https://res.cloudinary.com/demo/video/upload/pb_s5e1.mp4'
+   ),
+   (
+      20,
+      2,
+      'Чорні коти',
+      58,
+      'https://res.cloudinary.com/demo/video/upload/pb_s5e2.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      21,
+      1,
+      'Чорний день',
+      58,
+      'https://res.cloudinary.com/demo/video/upload/pb_s6e1.mp4'
+   ),
+   (
+      21,
+      2,
+      'Чорна сорочка',
+      59,
+      'https://res.cloudinary.com/demo/video/upload/pb_s6e2.mp4'
+   );
+
 INSERT INTO
    content (
       content_id,
@@ -1400,72 +1702,6 @@ INSERT INTO
 VALUES
    (
       21,
-      'series',
-      'Black Mirror',
-      2011,
-      'Антологія про темний бік технологій і сучасного суспільства.',
-      8.7,
-      'https://res.cloudinary.com/demo/image/upload/black_mirror.jpg'
-   );
-
-INSERT INTO
-   series (series_id)
-VALUES
-   (21);
-
-INSERT INTO
-   seasons (series_id, season_number, title)
-VALUES
-   (21, 1, 'Сезон 1');
-
-(21, 2, 'Сезон 2');
-
-(21, 3, 'Сезон 3');
-
-(21, 4, 'Сезон 4');
-
-(21, 5, 'Сезон 5');
-
-(21, 6, 'Сезон 6');
-
-INSERT INTO
-   episodes (
-      season_id,
-      episode_number,
-      title,
-      duration,
-      video_url
-   )
-VALUES
-   (
-      22,
-      1,
-      'Національний гімн',
-      44,
-      'https://res.cloudinary.com/demo/video/upload/bm_s1e1.mp4'
-   ),
-   (
-      22,
-      2,
-      '15 мільйонів заслуг',
-      62,
-      'https://res.cloudinary.com/demo/video/upload/bm_s1e2.mp4'
-   );
-
--- Продовжити
-INSERT INTO
-   content (
-      content_id,
-      content_type,
-      title,
-      release_year,
-      description,
-      rating,
-      poster_url
-   )
-VALUES
-   (
-      22,
       'film',
       'Люди Ікс: Перший клас',
       2011,
@@ -1478,7 +1714,7 @@ INSERT INTO
    films (film_id, duration, video_url)
 VALUES
    (
-      22,
+      21,
       131,
       'https://res.cloudinary.com/demo/video/upload/xmen_first_class_trailer.mp4'
    );
@@ -1524,10 +1760,8 @@ VALUES
    (19, 12),
    (20, 1),
    (20, 12),
-   (21, 2),
-   (21, 4),
-   (22, 6),
-   (22, 5);
+   (21, 6),
+   (21, 5);
 
 INSERT INTO
    content_directors (content_id, director_id)
@@ -1553,7 +1787,7 @@ VALUES
    (17, 2),
    (18, 9),
    (19, 9),
-   (22, 18);
+   (21, 18);
 
 INSERT INTO
    content_actors (content_id, actor_id)
@@ -1579,7 +1813,7 @@ VALUES
    (18, 5),
    (19, 12),
    (20, 21),
-   (22, 16);
+   (21, 16);
 
 DELETE FROM reviews;
 
@@ -1733,17 +1967,9 @@ VALUES
       '2025-10-01 15:00:00'
    ),
    (
-      21,
-      10,
-      21,
-      'Цікаво, але не для всіх',
-      6,
-      '2025-10-15 13:00:00'
-   ),
-   (
       22,
       12,
-      22,
+      21,
       'Фільм із душею',
       10,
       '2025-11-01 16:00:00'
@@ -1823,7 +2049,7 @@ VALUES
    (
       32,
       4,
-      22,
+      21,
       'Середній фільм, нічого особливого',
       6,
       '2026-03-15 10:00:00'
