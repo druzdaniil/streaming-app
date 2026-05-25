@@ -4,8 +4,8 @@ const SECRET = process.env.JWT_SECRET;
 const EXPIRES_IN = "7d";
 
 if (!SECRET) {
-   throw new Error('JWT_SECRET не встановлено у змінних середовища');
- }
+   throw new Error("JWT_SECRET не встановлено у змінних середовища");
+}
 
 export interface JwtPayload {
    userId: number;
