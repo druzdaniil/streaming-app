@@ -35,8 +35,8 @@ export function createUser(data: { first_name: string; last_name: string; email:
    const result = db
       .prepare(
          `
-    INSERT INTO users (first_name, last_name, email, password_hash, subscription_id)
-    VALUES (?, ?, ?, ?, 1)
+    INSERT INTO users (first_name, last_name, email, password_hash)
+    VALUES (?, ?, ?, ?)
   `,
       )
       .run(data.first_name, data.last_name, data.email, data.password_hash);
