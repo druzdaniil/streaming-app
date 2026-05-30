@@ -3,9 +3,9 @@ PRAGMA foreign_keys = ON;
 INSERT
 OR IGNORE INTO subscriptions (type, price)
 VALUES
-   ('free', 0),
-   ('basic', 99),
-   ('premium', 199);
+   ('Безкоштовна', 0),
+   ('Базова', 99),
+   ('Преміум', 199);
 
 DELETE FROM users;
 
@@ -303,10 +303,10 @@ VALUES
    (
       1,
       'Роберт Земекіс',
-      'Американський режисер, відомий за «Форрест Гамп».'
+      'Американський режисер, відомий за фільм «Форрест Гамп».'
    ),
-   (2, 'Сем Есмейл', 'Автор серіалу «Пан Робот».'),
-   (3, 'Тодд Філліпс', 'Автор «Джокера».'),
+   (2, 'Сем Есмейл', 'Режисер серіалу «Пан Робот».'),
+   (3, 'Тодд Філліпс', 'Режисер фільму «Джокера».'),
    (
       4,
       'Піт Доктер',
@@ -325,7 +325,7 @@ VALUES
    (
       7,
       'Крістофер Нолан',
-      'Відомий за «Інтерстеллар» та інші блокбастери.'
+      'Відомий за «Інтерстеллар» та інші захоплюючі кінострічки.'
    ),
    (
       8,
@@ -340,14 +340,14 @@ VALUES
    (
       10,
       'Френк Дарабонт',
-      'Відомий за «Втечу з Шоушенка».'
+      'Відомий за кінострічку «Втеча з Шоушенка».'
    ),
    (
       11,
       'Мартін Скорсезе',
       'Легендарний режисер «Острова проклятих».'
    ),
-   (12, 'Ґері Росс', 'Автор «Голодних ігор».'),
+   (12, 'Ґері Росс', 'Автор фільму «Голодні ігри».'),
    (
       13,
       'Філ Лорд',
@@ -366,12 +366,12 @@ VALUES
    (
       16,
       'Джон Фавро',
-      'Американський режисер і актор, творець «Залізної людини» та серіалу «Мандалорець».'
+      'Американський режисер і актор, творець «Залізної людини».'
    ),
    (
       17,
       'Майкл Бей',
-      'Американський режисер, відомий блокбастерами «Трансформери».'
+      'Американський режисер, відомий блокбастером «Трансформери».'
    ),
    (
       18,
@@ -391,7 +391,7 @@ VALUES
    (
       21,
       'Лана Вачовскі',
-      'Американська режисерка, співтворець «Матриці».'
+      'Американська режисерка, співавторка «Матриці».'
    ),
    (
       22,
@@ -427,11 +427,7 @@ VALUES
       'Виконавець головної ролі у «Пан Робот».'
    ),
    (2, 'Кейт Вінслет', 'Актриса «Титаніка».'),
-   (
-      3,
-      'Крістофер Мілер',
-      'Американський режисер і продюсер, відомий фільмами «Лего. Фільм» та «Мачо і ботан».'
-   ),
+   (3, 'Еллен Пейдж', 'Канадська актриса і режисер.'),
    (
       4,
       'Леонардо Ді Капріо',
@@ -440,7 +436,7 @@ VALUES
    (
       5,
       'Брайан Кренстон',
-      'Грав у «Пуститися берега».'
+      'Відомий за роль Волтера Вайта у серіалі «Пуститися берега».'
    ),
    (6, 'Гоакін Фенікс', 'Виконавець ролі Джокера.'),
    (
@@ -452,14 +448,14 @@ VALUES
    (
       9,
       'Меттью Макконахі',
-      'Головний герой «Інтерстеллара».'
+      'Грав головного героя фільму «Інтерстеллар».'
    ),
    (10, 'Дженніфер Лоуренс', 'Зірка «Голодних ігор».'),
    (11, 'Тім Роббінс', 'Актор «Втечі з Шоушенка».'),
    (
       12,
       'Боб Оденкірк',
-      'Головна роль у «Краще подзвоніть Солу».'
+      'Відігравав головну роль у «Краще подзвоніть Солу».'
    ),
    (
       13,
@@ -469,7 +465,7 @@ VALUES
    (
       14,
       'Роберт Дауні (молодший)',
-      'Американський актор, відомий роллю Тоні Старка у всесвіті Marvel.'
+      'Американський актор, відомий роллю Тоні Старка у кіновсесвіті Marvel.'
    ),
    (
       15,
@@ -479,7 +475,7 @@ VALUES
    (
       16,
       'Майкл Фассбендер',
-      'Ірландський актор, зірка фільмів «Люди Ікс» та «12 років рабства».'
+      'Ірландський актор, зірка франшизи «Люди Ікс».'
    ),
    (
       17,
@@ -504,7 +500,7 @@ VALUES
    (
       21,
       'Кіліан Мерфі',
-      'Ірландський актор, відомий роллю Томмі Шелбі у серіалі Peaky Blinders.'
+      'Ірландський актор, відомий роллю Томмі Шелбі у серіалі «Peaky Blinders».'
    ),
    (
       22,
@@ -530,8 +526,7 @@ VALUES
       26,
       'Том Харді',
       'Британський актор, відомий різноплановими ролями.'
-   ),
-   (27, 'Еллен Пейдж', 'Канадська актриса і режисер.');
+   );
 
 DELETE FROM episodes;
 
@@ -561,7 +556,7 @@ VALUES
       1994,
       'Дивовижна одіссея простодушного, але добросердечного чоловіка крізь ключові події американської історії.',
       8.8,
-      'https://res.cloudinary.com/demo/image/upload/forrest_gump.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159969/forrest_gump_ekak6t.jpg'
    );
 
 INSERT INTO
@@ -591,7 +586,7 @@ VALUES
       1997,
       'Епічна романтична драма про трагічне кохання на борту легендарного лайнера.',
       7.9,
-      'https://res.cloudinary.com/demo/image/upload/titanic.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159978/titanic_i5noja.jpg'
    );
 
 INSERT INTO
@@ -617,11 +612,11 @@ VALUES
    (
       3,
       'film',
-      'Inception',
+      'Початок',
       2010,
       'Крадій, який краде корпоративні секрети через технологію спільних сновидінь, отримує завдання вкласти ідею у розум генерального директора.',
       8.8,
-      'https://res.cloudinary.com/demo/image/upload/inception.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159971/inception_rqffkc.jpg'
    );
 
 INSERT INTO
@@ -647,11 +642,11 @@ VALUES
    (
       4,
       'film',
-      'Interstellar',
+      'Інтерстеллар',
       2014,
       'Команда астронавтів вирушає крізь червоточину в пошуках нового дому для людства.',
       8.6,
-      'https://res.cloudinary.com/demo/image/upload/interstellar.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159971/interstellar_wif2ss.jpg'
    );
 
 INSERT INTO
@@ -679,9 +674,9 @@ VALUES
       'film',
       'Джокер',
       2019,
-      'Провальний комік стає жертвою суспільства байдужості й поступово перетворюється на символ хаосу — Джокера.',
+      'Провальний комік стає жертвою суспільства байдужості й поступово перетворюється на символ хаосу - Джокера.',
       8.5,
-      'https://res.cloudinary.com/demo/image/upload/joker.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159972/joker_weu6rj.jpg'
    );
 
 INSERT INTO
@@ -711,7 +706,7 @@ VALUES
       1994,
       'Банкір, несправедливо засуджений за вбивство, знаходить порятунок у дружбі та надії у в''язниці суворого режиму.',
       9.3,
-      'https://res.cloudinary.com/demo/image/upload/shawshank.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159976/shawshank_nfy3tv.jpg'
    );
 
 INSERT INTO
@@ -741,7 +736,7 @@ VALUES
       2012,
       'У постапокаліптичному суспільстві молода дівчина бореться за виживання у жорстоких телевізійних іграх.',
       7.2,
-      'https://res.cloudinary.com/demo/image/upload/hunger_games.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159969/hunger_games_jsd4tk.jpg'
    );
 
 INSERT INTO
@@ -771,7 +766,7 @@ VALUES
       2008,
       'Мільярдер-зброярник створює бойовий костюм і стає супергероєм Залізна Людина.',
       7.9,
-      'https://res.cloudinary.com/demo/image/upload/iron_man.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159971/iron_man_xb2hfd.jpg'
    );
 
 INSERT INTO
@@ -801,7 +796,7 @@ VALUES
       1999,
       'Хакер дізнається, що реальність є комп''ютерною симуляцією, і приєднується до повстання проти машин.',
       8.7,
-      'https://res.cloudinary.com/demo/image/upload/matrix.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159974/matrix_edw16b.jpg'
    );
 
 INSERT INTO
@@ -831,7 +826,7 @@ VALUES
       2010,
       'Двоє федеральних маршалів розслідують зникнення пацієнтки з ізольованої психіатричної лікарні.',
       8.1,
-      'https://res.cloudinary.com/demo/image/upload/shutter_island.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159977/shutter_island_otk7ej.jpg'
    );
 
 INSERT INTO
@@ -861,7 +856,7 @@ VALUES
       1993,
       'Вчені клонують динозаврів для тематичного парку, але хаос неминучий, коли тварини виходять з-під контролю.',
       8.2,
-      'https://res.cloudinary.com/demo/image/upload/jurassic_park.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159973/jurassic_park_bmud9l.jpg'
    );
 
 INSERT INTO
@@ -891,7 +886,7 @@ VALUES
       2004,
       'Пара після болісного розставання вирішує видалити спогади одне про одного, проте почуття виявляються сильнішими за технології.',
       8.3,
-      'https://res.cloudinary.com/demo/image/upload/eternal_sunshine.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159968/eternal_sunshine_borhe6.jpg'
    );
 
 INSERT INTO
@@ -921,7 +916,7 @@ VALUES
       2014,
       'Звичайний Лего-персонаж опиняється в центрі пригоди, покликаної врятувати увесь Лего-всесвіт.',
       7.8,
-      'https://res.cloudinary.com/demo/image/upload/lego_movie.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159974/lego_movie_l4thxr.jpg'
    );
 
 INSERT INTO
@@ -949,9 +944,9 @@ VALUES
       'film',
       'Доктор Стрендж',
       2016,
-      'Блискучий хірург після аварії відкриває світ містичних мистецтв і стає захисником Землі.',
+      'Блискучий хірург після аварії відкриває світ містичних мистецтв і стає верховним магом.',
       7.5,
-      'https://res.cloudinary.com/demo/image/upload/doctor_strange.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159968/doctor_strange_hmjvyv.jpg'
    );
 
 INSERT INTO
@@ -981,7 +976,7 @@ VALUES
       2007,
       'Підліток несподівано опиняється між двома ворогуючими расами роботів-прибульців у битві за долю Землі.',
       7.0,
-      'https://res.cloudinary.com/demo/image/upload/transformers.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159979/transformers_prtr7n.jpg'
    );
 
 INSERT INTO
@@ -1011,7 +1006,7 @@ VALUES
       2014,
       'Моторошна лялька стає каналом для злого духа, що тероризує молоду сім''ю.',
       6.5,
-      'https://res.cloudinary.com/demo/image/upload/annabelle.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159967/annabelle_fkonke.jpg'
    );
 
 INSERT INTO
@@ -1041,7 +1036,7 @@ VALUES
       2015,
       'Параноїдальний хакер вступає до підпільної групи, яка планує знищити найбільшу корпорацію у світі.',
       8.7,
-      'https://res.cloudinary.com/demo/image/upload/mr_robot.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780160992/mr_robot_drprgf.jpg'
    );
 
 INSERT INTO
@@ -1178,7 +1173,7 @@ VALUES
       2008,
       'Учитель хімії, дізнавшись про невиліковну хворобу, починає виготовляти метамфетамін разом із колишнім учнем.',
       9.5,
-      'https://res.cloudinary.com/demo/image/upload/breaking_bad.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780160992/breaking_bad_xvin3l.jpg'
    );
 
 INSERT INTO
@@ -1340,7 +1335,7 @@ VALUES
       2015,
       'Передісторія «Пуститися берега»: як невдаха-адвокат Джиммі Макгілл перетворюється на аферистського Солу Ґудмена.',
       8.8,
-      'https://res.cloudinary.com/demo/image/upload/better_call_saul.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780160991/better_call_saul_dptzuq.jpg'
    );
 
 INSERT INTO
@@ -1516,11 +1511,11 @@ VALUES
    (
       20,
       'series',
-      'Peaky Blinders',
+      'Гострі картузи',
       2013,
       'Кримінальна сага про гангстерську родину Шелбі у Бірмінгемі після Першої світової війни.',
       8.8,
-      'https://res.cloudinary.com/demo/image/upload/peaky_blinders.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780160993/peaky_blinders_pogylc.jpg'
    );
 
 INSERT INTO
@@ -1707,7 +1702,7 @@ VALUES
       2011,
       'Передісторія всесвіту Людей Ікс: молоді Чарльз Ксав''єр і Магнето об''єднуються проти спільного ворога.',
       7.8,
-      'https://res.cloudinary.com/demo/image/upload/xmen_first_class.jpg'
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159979/xmen_first_class_nrawzm.jpg'
    );
 
 INSERT INTO
@@ -1796,7 +1791,7 @@ VALUES
    (2, 2),
    (2, 4),
    (3, 4),
-   (3, 27),
+   (3, 3),
    (4, 9),
    (4, 23),
    (5, 6),
