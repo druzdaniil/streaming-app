@@ -43,11 +43,3 @@ export function createUser(data: { first_name: string; last_name: string; email:
 
    return result.lastInsertRowid as number;
 }
-
-export function updateSubscription(userId: number, subscriptionId: number): void {
-   db.prepare(
-      `
-    UPDATE users SET subscription_id = ? WHERE user_id = ?
-  `,
-   ).run(subscriptionId, userId);
-}
