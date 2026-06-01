@@ -565,7 +565,7 @@ VALUES
    (
       1,
       142,
-      'https://res.cloudinary.com/demo/video/upload/forrest_gump_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780273067/forrest_gump_trailer_kasatg.mp4'
    );
 
 INSERT INTO
@@ -1066,21 +1066,21 @@ VALUES
       1,
       'eps1.0_hellofriend.mov',
       62,
-      'https://res.cloudinary.com/demo/video/upload/mrrobot_s1e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780229439/mrrobot_s1e1_hrywqe.mp4'
    ),
    (
       1,
       2,
       'eps1.1_ones-and-zer0es.mpeg',
       48,
-      'https://res.cloudinary.com/demo/video/upload/mrrobot_s1e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780229437/mrrobot_s1e2_bzvsda.mp4'
    ),
    (
       1,
       3,
       'eps1.2_d3bug.mkv',
       46,
-      'https://res.cloudinary.com/demo/video/upload/mrrobot_s1e3.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780229451/mrrobot_s1e3_uyqajc.mp4'
    );
 
 INSERT INTO
@@ -1097,14 +1097,14 @@ VALUES
       1,
       'eps2.0_unm4sk-pt1.tc',
       41,
-      'https://res.cloudinary.com/demo/video/upload/mrrobot_s2e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780229428/mrrobot_s2e1_ldgwgq.mp4'
    ),
    (
       2,
       2,
       'eps2.0_unm4sk-pt2.tc',
       42,
-      'https://res.cloudinary.com/demo/video/upload/mrrobot_s2e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780229431/mrrobot_s2e2_tesoez.mp4'
    );
 
 INSERT INTO
@@ -1121,14 +1121,14 @@ VALUES
       1,
       'eps3.0_power-saver-mode.h',
       53,
-      'https://res.cloudinary.com/demo/video/upload/mrrobot_s3e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780229438/mrrobot_s3e1_yo4vh0.mp4'
    ),
    (
       3,
       2,
       'eps3.1_undo.gz',
       47,
-      'https://res.cloudinary.com/demo/video/upload/mrrobot_s3e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780229449/mrrobot_s3e2_zjrfz0.mp4'
    );
 
 INSERT INTO
@@ -1145,14 +1145,14 @@ VALUES
       1,
       '401 Unauthorized',
       61,
-      'https://res.cloudinary.com/demo/video/upload/mrrobot_s4e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780229432/mrrobot_s4e1_kxrh8y.mp4'
    ),
    (
       4,
       2,
       '402 Payment Required',
       48,
-      'https://res.cloudinary.com/demo/video/upload/mrrobot_s4e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1780229430/mrrobot_s4e2_ewcpyi.mp4'
    );
 
 INSERT INTO
