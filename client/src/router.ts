@@ -10,6 +10,7 @@ interface Route {
 }
 
 const routes: Route[] = [];
+let currentRenderToken = {};
 
 function addRoute(path: string, render: PageRenderer, isProtected = false): void {
    const paramNames: string[] = [];
@@ -19,7 +20,7 @@ function addRoute(path: string, render: PageRenderer, isProtected = false): void
             paramNames.push(name);
             return "([^/]+)";
          }) +
-         "$",
+         "$"
    );
    routes.push({ pattern, paramNames, render, guarded: isProtected });
 }
@@ -76,6 +77,13 @@ export function navigate(path: string): void {
    handleRoute();
 }
 
+function renderNotFoundPage(app: HTMLElement): void {
+   import("./pages/not-found").then(({ renderNotFound }) => {
+      app.innerHTML = "";
+      app.appendChild(renderNotFound());
+   });
+}
+
 export function handleRoute(): void {
    const path = location.pathname;
    const app = document.getElementById("app")!;
@@ -85,6 +93,7 @@ export function handleRoute(): void {
       if (!match) continue;
 
       if (route.guarded && !isLoggedIn()) {
+         sessionStorage.setItem("redirectAfterLogin", path);
          navigate("/login");
          return;
       }
@@ -94,26 +103,22 @@ export function handleRoute(): void {
          params[name] = match[i + 1];
       });
 
+      const token = {};
+      currentRenderToken = token;
+
       route
          .render(params)
          .then((el) => {
+            if (token !== currentRenderToken) return;
             app.innerHTML = "";
             app.appendChild(el);
          })
-         .catch(() => {
-            import("./pages/not-found").then(({ renderNotFound }) => {
-               app.innerHTML = "";
-               app.appendChild(renderNotFound());
-            });
-         });
+         .catch(() => renderNotFoundPage(app));
 
       return;
    }
 
-   import("./pages/not-found").then(({ renderNotFound }) => {
-      app.innerHTML = "";
-      app.appendChild(renderNotFound());
-   });
+   renderNotFoundPage(app);
 }
 
 export function initRouter(): void {
