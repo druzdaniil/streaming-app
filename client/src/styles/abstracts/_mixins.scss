@@ -1,0 +1,37 @@
+@use "variables" as *;
+
+@mixin mobile {
+   @media (max-width: 768px) {
+      @content;
+   }
+}
+
+@mixin tablet {
+   @media (max-width: 1024px) {
+      @content;
+   }
+}
+
+@mixin ellipsis {
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+}
+
+@mixin flex-center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+@mixin card-hover {
+   transition:
+      transform $transition,
+      box-shadow $transition,
+      border-color $transition;
+   &:hover {
+      transform: translateY(-4px);
+      border-color: $color-border-hover;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+   }
+}
