@@ -1,7 +1,6 @@
 import { Request, Response } from "express";
 import { getAllSubscriptions, getSubscriptionById, getActiveTransaction, activateSubscription } from "../models/subscription.model";
 import { findById } from "../models/user.model";
-import type { ActivateSubscriptionBody } from "../types/api.types";
 
 export function getSubscriptions(_req: Request, res: Response): void {
    const subscriptions = getAllSubscriptions();
