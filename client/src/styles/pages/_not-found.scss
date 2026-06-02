@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.not-found {
+   &__inner {
+      @include flex-center;
+      flex-direction: column;
+      gap: 16px;
+      min-height: calc(100vh - #{$header-height});
+      text-align: center;
+   }
+
+   &__code {
+      font-family: $font-mono;
+      font-size: clamp(5rem, 15vw, 9rem);
+      font-weight: 700;
+      line-height: 1;
+      background: linear-gradient(135deg, $color-primary, $color-accent);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+   }
+
+   &__title {
+      font-family: $font-accent;
+      font-size: 2rem;
+      color: $color-text;
+      font-weight: 100;
+   }
+
+   &__text {
+      color: $color-text-muted;
+      margin-bottom: 8px;
+   }
+}
