@@ -42,4 +42,6 @@ export function seedDatabase(): void {
    }
 }
 
-seedDatabase();
+if (require.main === module) {
+   seedDatabase();
+}
