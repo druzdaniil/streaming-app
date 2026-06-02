@@ -6,6 +6,22 @@ import type { RegisterBody, LoginBody } from "../types/api.types";
 
 const EMAIL_REGEX = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+function validatePassword(password: string): string | null {
+   if (password.length < 8) {
+      return "Пароль має містити щонайменше 8 символів";
+   }
+   if (!/[0-9]/.test(password)) {
+      return "Пароль має містити щонайменше одну цифру";
+   }
+   if (!/[a-zA-Zа-яА-ЯіІїЇєЄ]/.test(password)) {
+      return "Пароль має містити щонайменше одну літеру";
+   }
+   if (!/[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(password)) {
+      return "Пароль має містити щонайменше один спецсимвол";
+   }
+   return null;
+}
+
 export async function register(req: Request, res: Response): Promise<void> {
    const { first_name, last_name, password } = req.body as RegisterBody;
    const email = req.body.email?.toLowerCase().trim();
@@ -20,8 +36,9 @@ export async function register(req: Request, res: Response): Promise<void> {
       return;
    }
 
-   if (password.length < 6) {
-      res.status(400).json({ error: "Пароль має містити щонайменше 6 символів" });
+   const passwordError = validatePassword(password);
+   if (passwordError) {
+      res.status(400).json({ error: passwordError });
       return;
    }
 
