@@ -5,34 +5,41 @@ import fs from "fs";
 const DB_PATH = path.resolve(__dirname, "../../database/database.sqlite");
 const SEED_PATH = path.resolve(__dirname, "../../database/seed.sql");
 
-const db = new Database(DB_PATH);
-db.pragma("foreign_keys = ON");
+const TABLES_TO_CLEAR = ["reviews", "content_actors", "content_directors", "content_genres", "episodes", "seasons", "series", "films", "content", "transactions", "users", "genres", "actors", "directors", "subscriptions", "sqlite_sequence"] as const;
 
-const seed = fs.readFileSync(SEED_PATH, "utf-8");
+export function seedDatabase(): void {
+   if (!fs.existsSync(DB_PATH)) {
+      throw new Error("БД не знайдено. Спочатку запустіть init-db.ts для ініціалізації схеми.");
+   }
 
-const run = db.transaction(() => {
-   db.exec(`
-    DELETE FROM reviews;
-    DELETE FROM content_actors;
-    DELETE FROM content_directors;
-    DELETE FROM content_genres;
-    DELETE FROM episodes;
-    DELETE FROM seasons;
-    DELETE FROM series;
-    DELETE FROM films;
-    DELETE FROM content;
-    DELETE FROM transactions;
-    DELETE FROM users;
-    DELETE FROM genres;
-    DELETE FROM actors;
-    DELETE FROM directors;
-    DELETE FROM subscriptions;
-    DELETE FROM sqlite_sequence;
-  `);
+   const db = new Database(DB_PATH);
 
-   db.exec(seed);
-});
+   try {
+      db.pragma("journal_mode = WAL");
 
-run();
-console.log("БД успішно заповнено тестовими даними");
-db.close();
+      const seed = fs.readFileSync(SEED_PATH, "utf-8");
+
+      db.transaction(() => {
+         db.pragma("foreign_keys = OFF");
+
+         for (const table of TABLES_TO_CLEAR) {
+            db.exec(`DELETE FROM ${table};`);
+         }
+
+         db.pragma("foreign_keys = ON");
+
+         db.exec(seed);
+      })();
+
+      const fkViolations = db.pragma("foreign_key_check") as unknown[];
+      if (fkViolations.length > 0) {
+         throw new Error(`Знайдено порушення зовнішніх ключів після seed:\n${JSON.stringify(fkViolations, null, 2)}`);
+      }
+
+      console.log("БД успішно заповнено тестовими даними");
+   } finally {
+      db.close();
+   }
+}
+
+seedDatabase();
