@@ -1,0 +1,45 @@
+@use "styles/abstracts/variables" as *;
+@use "styles/abstracts/mixins" as *;
+@use "styles/base/reset";
+@use "styles/base/typography";
+
+@use "styles/components/buttons";
+@use "styles/components/forms";
+@use "styles/components/badges";
+@use "styles/components/loader";
+@use "styles/components/section";
+@use "styles/components/header";
+@use "styles/components/content-card";
+
+@use "styles/pages/not-found";
+@use "styles/pages/auth";
+@use "styles/pages/home";
+@use "styles/pages/catalog";
+@use "styles/pages/content-detail";
+@use "styles/pages/profile";
+
+:root {
+   --color-bg: #{$color-bg};
+   --color-text: #{$color-text};
+   --font-main: #{$font-main};
+}
+
+.container {
+   width: 100%;
+   max-width: $container-width;
+   margin: 0 auto;
+   padding: 0 24px;
+
+   @include mobile {
+      padding: 0 16px;
+   }
+}
+
+.page {
+   min-height: 100vh;
+   padding-top: $header-height;
+}
+
+.page-content {
+   padding: 32px 0 64px;
+}
