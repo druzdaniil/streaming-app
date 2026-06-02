@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.auth-form {
+   width: 100%;
+   max-width: 440px;
+   margin: 40px auto 0;
+
+   &__header {
+      text-align: center;
+      margin-bottom: 28px;
+   }
+
+   &__title {
+      font-size: 1.75rem;
+      margin-bottom: 6px;
+   }
+
+   &__subtitle {
+      color: $color-text-muted;
+      font-size: 0.9rem;
+   }
+
+   &__body {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   &__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+
+      @include mobile {
+         grid-template-columns: 1fr;
+      }
+   }
+
+   &__submit {
+      width: 100%;
+      justify-content: center;
+      padding: 12px;
+      font-size: 0.95rem;
+      margin-top: 4px;
+   }
+
+   &__footer {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.875rem;
+      color: $color-text-muted;
+
+      a {
+         color: $color-primary;
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
