@@ -1,0 +1,486 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+@use "sass:color";
+
+.content-detail {
+   &__back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.85rem;
+      color: $color-text-muted;
+      margin-bottom: 28px;
+      transition: color $transition;
+
+      &:hover {
+         color: $color-text;
+      }
+   }
+
+   &__hero {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 32px;
+      margin-bottom: 40px;
+
+      @include mobile {
+         grid-template-columns: 140px 1fr;
+         gap: 20px;
+      }
+   }
+
+   &__poster {
+      width: 100%;
+      aspect-ratio: 2/3;
+      border-radius: $radius-lg;
+      background: $color-bg-elevated;
+      @include flex-center;
+      overflow: hidden;
+      flex-shrink: 0;
+
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      &-icon {
+         color: $color-text-muted;
+         opacity: 0.3;
+      }
+   }
+
+   &__info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+
+   &__meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: 0.85rem;
+      color: $color-text-muted;
+   }
+
+   &__rating {
+      font-family: $font-mono;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: $color-rating;
+   }
+
+   &__dot {
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: $color-text-muted;
+   }
+
+   &__genres {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+   }
+
+   &__description {
+      font-size: 0.9rem;
+      color: $color-text-subtle;
+      line-height: 1.7;
+      max-width: 600px;
+   }
+
+   &__actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+   }
+
+   &__crew {
+      font-size: 0.85rem;
+      color: $color-text-muted;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      span {
+         color: $color-text-subtle;
+         font-weight: 500;
+      }
+   }
+}
+
+.player {
+   margin-bottom: 48px;
+
+   &__wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+      border-radius: $radius-lg;
+      overflow: hidden;
+
+      video {
+         width: 100%;
+         height: 100%;
+         display: block;
+      }
+   }
+
+   &__placeholder {
+      @include flex-center;
+      flex-direction: column;
+      gap: 16px;
+      width: 100%;
+      height: 100%;
+      background: $color-bg-elevated;
+      cursor: pointer;
+      transition: background $transition;
+
+      &:hover {
+         background: color.adjust($color-bg-elevated, $lightness: 3%);
+      }
+   }
+
+   &__play-btn {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+      background: $color-primary;
+      @include flex-center;
+      transition:
+         transform $transition,
+         background $transition;
+
+      &:hover {
+         transform: scale(1.08);
+         background: $color-primary-hover;
+      }
+
+      svg {
+         margin-left: 4px;
+      }
+   }
+
+   &__label {
+      font-size: 0.9rem;
+      color: $color-text-muted;
+   }
+}
+
+.reviews {
+   &__title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+   }
+
+   &__form {
+      background: $color-bg-card;
+      border: 1px solid $color-border;
+      border-radius: $radius-lg;
+      padding: 20px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+   }
+
+   &__form-hint {
+      font-size: 0.8rem;
+      color: $color-text-muted;
+   }
+
+   &__rating-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+   }
+
+   &__rating-label {
+      font-size: 0.85rem;
+      color: $color-text-subtle;
+      white-space: nowrap;
+   }
+
+   &__rating-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+   }
+
+   &__rating-value {
+      font-family: $font-mono;
+      font-size: 1rem;
+      font-weight: 700;
+      color: $color-rating;
+      min-width: 24px;
+      text-align: center;
+   }
+
+   &__rating-btn {
+      width: 28px;
+      height: 28px;
+      border-radius: $radius-sm;
+      background: $color-bg-elevated;
+      border: 1px solid $color-border;
+      color: $color-text;
+      font-size: 1rem;
+      @include flex-center;
+      cursor: pointer;
+      transition: background $transition;
+
+      &:hover {
+         background: $color-bg-input;
+      }
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+   }
+
+   &__item {
+      background: $color-bg-card;
+      border: 1px solid $color-border;
+      border-radius: $radius-lg;
+      padding: 16px 20px;
+   }
+
+   &__item-header {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+   }
+
+   &__avatar {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: $color-primary;
+      @include flex-center;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: #fff;
+      flex-shrink: 0;
+   }
+
+   &__item-meta {
+      flex: 1;
+   }
+
+   &__item-name {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: $color-text;
+   }
+
+   &__item-date {
+      font-size: 0.775rem;
+      color: $color-text-muted;
+   }
+
+   &__item-rating {
+      font-family: $font-mono;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: $color-rating;
+   }
+
+   &__item-text {
+      font-size: 0.875rem;
+      color: $color-text-subtle;
+      line-height: 1.65;
+   }
+
+   &__delete {
+      margin-left: auto;
+      font-size: 0.75rem;
+      color: $color-text-muted;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 2px 6px;
+      border-radius: $radius-sm;
+      transition:
+         color $transition,
+         background $transition;
+
+      &:hover {
+         color: $color-accent;
+         background: rgba($color-accent, 0.1);
+      }
+   }
+
+   &__login-prompt {
+      padding: 20px;
+      background: $color-bg-elevated;
+      border-radius: $radius-lg;
+      text-align: center;
+      font-size: 0.875rem;
+      color: $color-text-muted;
+      margin-bottom: 24px;
+
+      a {
+         color: $color-primary;
+         &:hover {
+            text-decoration: underline;
+         }
+      }
+   }
+}
+
+.seasons {
+   margin-bottom: 48px;
+
+   &__title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+   }
+
+   &__list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+   }
+}
+
+.season {
+   background: $color-bg-card;
+   border: 1px solid $color-border;
+   border-radius: $radius-lg;
+   overflow: hidden;
+
+   &__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 20px;
+      cursor: pointer;
+      transition: background $transition;
+      user-select: none;
+
+      &:hover {
+         background: $color-bg-elevated;
+      }
+   }
+
+   &__title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: $color-text;
+   }
+
+   &__count {
+      font-size: 0.8rem;
+      color: $color-text-muted;
+   }
+
+   &__chevron {
+      color: $color-text-muted;
+      transition: transform $transition;
+      flex-shrink: 0;
+
+      &--open {
+         transform: rotate(180deg);
+      }
+   }
+
+   &__episodes {
+      border-top: 1px solid $color-border;
+
+      &--hidden {
+         display: none;
+      }
+   }
+}
+
+.episode {
+   display: flex;
+   align-items: center;
+   gap: 14px;
+   padding: 12px 20px;
+   border-bottom: 1px solid $color-border;
+   transition: background $transition;
+   cursor: pointer;
+
+   &:last-child {
+      border-bottom: none;
+   }
+
+   &:hover {
+      background: $color-bg-elevated;
+   }
+
+   &--active {
+      background: rgba($color-primary, 0.08);
+      border-left: 3px solid $color-primary;
+
+      .episode__play {
+         background: $color-primary;
+      }
+   }
+
+   &__number {
+      font-family: $font-mono;
+      font-size: 0.78rem;
+      color: $color-text-muted;
+      min-width: 24px;
+      text-align: center;
+      flex-shrink: 0;
+   }
+
+   &__info {
+      flex: 1;
+      min-width: 0;
+   }
+
+   &__title {
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: $color-text;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+   }
+
+   &__duration {
+      font-size: 0.775rem;
+      color: $color-text-muted;
+      margin-top: 2px;
+   }
+
+   &__playing {
+      font-size: 0.75rem;
+      color: $color-primary;
+      margin-top: 2px;
+   }
+
+   &__play {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: $color-bg-elevated;
+      border: 1px solid $color-border;
+      @include flex-center;
+      flex-shrink: 0;
+      transition:
+         background $transition,
+         border-color $transition;
+      color: $color-text;
+
+      &:hover {
+         background: $color-primary;
+         border-color: $color-primary;
+         color: #fff;
+      }
+   }
+}
