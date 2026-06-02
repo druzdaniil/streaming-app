@@ -3,7 +3,7 @@ import path from "path";
 import db from "./connection";
 
 const DB_PATH = path.resolve(__dirname, "../../database/database.sqlite");
-const SCHEMA_PATH = path.resolve(__dirname, "../../database/schema.sql");
+const SCHEMA_PATH = path.resolve(__dirname, "../../sql/schema.sql");
 
 export function initDatabase(): void {
    const dbExists = fs.existsSync(DB_PATH);

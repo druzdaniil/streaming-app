@@ -3,7 +3,7 @@ import path from "path";
 import fs from "fs";
 
 const DB_PATH = path.resolve(__dirname, "../../database/database.sqlite");
-const SEED_PATH = path.resolve(__dirname, "../../database/seed.sql");
+const SEED_PATH = path.resolve(__dirname, "../../sql/seed.sql");
 
 const TABLES_TO_CLEAR = ["reviews", "content_actors", "content_directors", "content_genres", "episodes", "seasons", "series", "films", "content", "transactions", "users", "genres", "actors", "directors", "subscriptions", "sqlite_sequence"] as const;
 
