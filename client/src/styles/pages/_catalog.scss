@@ -1,0 +1,112 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.catalog {
+   &__header {
+      margin-bottom: 32px;
+
+      h1 {
+         margin-bottom: 8px;
+      }
+
+      p {
+         color: $color-text-muted;
+         font-size: 0.9rem;
+      }
+   }
+
+   &__toolbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+   }
+
+   &__search {
+      flex: 1;
+      min-width: 200px;
+      max-width: 320px;
+      position: relative;
+
+      input {
+         padding-left: 38px;
+      }
+
+      &-icon {
+         position: absolute;
+         left: 12px;
+         top: 50%;
+         transform: translateY(-50%);
+         color: $color-text-muted;
+         pointer-events: none;
+         display: flex;
+      }
+   }
+
+   &__tabs {
+      display: flex;
+      gap: 4px;
+      background: $color-bg-elevated;
+      border-radius: $radius-md;
+      padding: 4px;
+   }
+
+   &__tab {
+      padding: 6px 16px;
+      border-radius: $radius-sm;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: $color-text-muted;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      transition: all $transition;
+
+      &--active {
+         background: $color-bg-card;
+         color: $color-text;
+         box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      &:hover:not(&--active) {
+         color: $color-text;
+      }
+   }
+
+   &__genres {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+   }
+
+   &__genre-btn {
+      padding: 5px 14px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      border: 1px solid $color-border;
+      background: transparent;
+      color: $color-text-subtle;
+      cursor: pointer;
+      transition: all $transition;
+
+      &:hover {
+         border-color: $color-border-hover;
+         color: $color-text;
+      }
+
+      &--active {
+         background: $color-primary;
+         border-color: $color-primary;
+         color: #fff;
+      }
+   }
+
+   &__count {
+      font-size: 0.85rem;
+      color: $color-text-muted;
+      margin-bottom: 16px;
+   }
+}
