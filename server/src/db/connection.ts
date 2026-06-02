@@ -4,13 +4,11 @@ import fs from "fs";
 
 const DB_PATH = path.resolve(__dirname, "../../database/database.sqlite");
 
-const SCHEMA_PATH = path.resolve(__dirname, "../../database/schema.sql");
+fs.mkdirSync(path.dirname(DB_PATH), { recursive: true });
 
 const db = new Database(DB_PATH);
 
+db.pragma("journal_mode = WAL");
 db.pragma("foreign_keys = ON");
-
-const schema = fs.readFileSync(SCHEMA_PATH, "utf-8");
-db.exec(schema);
 
 export default db;
