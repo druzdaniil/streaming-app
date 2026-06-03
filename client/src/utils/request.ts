@@ -15,6 +15,8 @@ interface RequestOptions extends Omit<RequestInit, "body"> {
    body?: unknown;
 }
 
+const API_BASE = import.meta.env.VITE_API_URL ?? "";
+
 export async function request<T>(url: string, options: RequestOptions = {}): Promise<T> {
    const { body, headers: extraHeaders, ...rest } = options;
 
@@ -28,7 +30,7 @@ export async function request<T>(url: string, options: RequestOptions = {}): Pro
       headers["Authorization"] = `Bearer ${token}`;
    }
 
-   const response = await fetch(url, {
+   const response = await fetch(`${API_BASE}${url}`, {
       ...rest,
       headers,
       body: body !== undefined ? JSON.stringify(body) : undefined,
