@@ -28,3 +28,12 @@ export function authMiddleware(req: Request, res: Response, next: NextFunction):
    req.userId = payload.userId;
    next();
 }
+
+export function optionalAuthMiddleware(req: Request, _res: Response, next: NextFunction): void {
+   const authHeader = req.headers.authorization;
+   if (authHeader?.startsWith("Bearer ")) {
+      const payload = verifyToken(authHeader.split(" ")[1]);
+      if (payload) req.userId = payload.userId;
+   }
+   next();
+}
