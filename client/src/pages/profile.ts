@@ -14,6 +14,16 @@ export async function renderProfile(): Promise<HTMLElement> {
    content.innerHTML = `<div class="container"><div id="profile-inner"></div></div>`;
    const inner = content.querySelector<HTMLDivElement>("#profile-inner")!;
 
+   const params = new URLSearchParams(location.search);
+   const upgradeReason = params.get("reason");
+
+   if (upgradeReason) {
+      const banner = document.createElement("div");
+      banner.className = "error-message";
+      banner.textContent = decodeURIComponent(upgradeReason);
+      inner.appendChild(banner);
+   }
+
    const [user, status, subscriptions] = await Promise.all([
       getMe(),
       getStatus().catch(
