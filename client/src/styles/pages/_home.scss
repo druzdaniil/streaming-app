@@ -99,6 +99,13 @@
          background-size: contain;
          pointer-events: none;
       }
+
+      @include mobile {
+         order: -1;
+         flex-basis: 100%;
+         max-width: unset;
+         min-width: unset;
+      }
    }
 
    &__btn {
