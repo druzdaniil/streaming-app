@@ -35,42 +35,54 @@ function renderBack(): HTMLElement {
 
 function renderFilmHero(film: FilmDetail): HTMLElement {
    const FILM_ICON = `<svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="1"><rect x="2" y="2" width="20" height="20" rx="2"/>
-    <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 7h5M17 17h5"/></svg>`;
+     stroke="currentColor" stroke-width="1"><rect x="2" y="2" width="20" height="20" rx="2"/>
+     <path d="M7 2v20M17 2v20M2 12h20M2 7h5M2 17h5M17 7h5M17 17h5"/></svg>`;
+
+   const poster = film.poster_url ? `<img src="${film.poster_url}" alt="${film.title}" />` : `<div class="content-detail__poster-icon">${FILM_ICON}</div>`;
+
+   const meta = `
+     <div class="content-detail__meta">
+        <span class="content-detail__rating">${formatRating(film.rating)}/10</span>
+        <span class="content-detail__dot"></span>
+        <span>${film.release_year}</span>
+        ${film.duration ? `<span class="content-detail__dot"></span><span>${formatDuration(film.duration)}</span>` : ""}
+     </div>
+  `;
+
+   const genres = `
+     <div class="content-detail__genres">
+        ${film.genres.map((g) => `<span class="badge badge--genre">${g}</span>`).join("")}
+     </div>
+  `;
+
+   const crew = `
+     <div class="content-detail__crew">
+        ${film.directors.length ? `<div>Режисер: <span>${film.directors.join(", ")}</span></div>` : ""}
+        ${film.actors.length ? `<div>Актори: <span>${film.actors.join(", ")}</span></div>` : ""}
+     </div>
+  `;
 
    const el = document.createElement("div");
    el.className = "content-detail__hero";
    el.innerHTML = `
-    <div class="content-detail__poster">
-      ${film.poster_url ? `<img src="${film.poster_url}" alt="${film.title}" />` : `<div class="content-detail__poster-icon">${FILM_ICON}</div>`}
-    </div>
-    <div class="content-detail__info">
-      <h1>${film.title}</h1>
-      <div class="content-detail__meta">
-        <span class="content-detail__rating">${formatRating(film.rating)}/10</span>
-        <span class="content-detail__dot"></span>
-        <span>${film.release_year}</span>
-        ${
-           film.duration
-              ? `
-          <span class="content-detail__dot"></span>
-          <span>${formatDuration(film.duration)}</span>
-        `
-              : ""
-        }
-      </div>
-      <div class="content-detail__genres">
-        ${film.genres.map((g) => `<span class="badge badge--genre">${g}</span>`).join("")}
-      </div>
-      ${film.description ? `<p class="content-detail__description">${film.description}</p>` : ""}
-      <div class="content-detail__actions">
-        <button class="btn btn--primary" id="watch-btn">▶ Дивитись</button>
-      </div>
-      <div class="content-detail__crew">
-        ${film.directors.length ? `<div>Режисер: <span>${film.directors.join(", ")}</span></div>` : ""}
-        ${film.actors.length ? `<div>Актори: <span>${film.actors.join(", ")}</span></div>` : ""}
-      </div>
-    </div>
+     <div class="content-detail__top">
+        <div class="content-detail__poster">${poster}</div>
+        <div class="content-detail__short-meta">
+           <h1>${film.title}</h1>
+           ${meta}
+           ${genres}
+        </div>
+     </div>
+     <div class="content-detail__info">
+        <h1>${film.title}</h1>
+        ${meta}
+        ${genres}
+        ${film.description ? `<p class="content-detail__description">${film.description}</p>` : ""}
+        <div class="content-detail__actions">
+           <button class="btn btn--primary" id="watch-btn">▶ Дивитись</button>
+        </div>
+        ${crew}
+     </div>
   `;
 
    el.querySelector("#watch-btn")!.addEventListener("click", () => {

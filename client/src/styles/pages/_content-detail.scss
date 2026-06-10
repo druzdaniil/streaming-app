@@ -24,8 +24,20 @@
       margin-bottom: 40px;
 
       @include mobile {
-         grid-template-columns: 140px 1fr;
+         display: flex;
+         flex-direction: column;
          gap: 20px;
+      }
+   }
+
+   &__top {
+      display: block;
+
+      @include mobile {
+         display: flex;
+         flex-direction: row;
+         gap: 16px;
+         align-items: flex-start;
       }
    }
 
@@ -48,12 +60,40 @@
          color: $color-text-muted;
          opacity: 0.3;
       }
+
+      @include mobile {
+         width: 110px;
+      }
+   }
+
+   &__short-meta {
+      display: none;
+
+      @include mobile {
+         display: flex;
+         flex-direction: column;
+         gap: 8px;
+         padding-top: 4px;
+
+         h1 {
+            font-size: 1.1rem;
+            line-height: 1.3;
+         }
+      }
    }
 
    &__info {
       display: flex;
       flex-direction: column;
       gap: 12px;
+
+      @include mobile {
+         & > h1,
+         & > .content-detail__meta,
+         & > .content-detail__genres {
+            display: none;
+         }
+      }
    }
 
    &__meta {

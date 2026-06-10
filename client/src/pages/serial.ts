@@ -40,22 +40,17 @@ function renderBack(): HTMLElement {
 
 function renderSerialHero(series: SeriesDetail): HTMLElement {
    const SERIES_ICON = `<svg width="56" height="56" viewBox="0 0 24 24" fill="none"
-    stroke="currentColor" stroke-width="1">
-    <rect x="2" y="3" width="20" height="14" rx="2"/>
-    <path d="M8 21h8M12 17v4"/>
+     stroke="currentColor" stroke-width="1">
+     <rect x="2" y="3" width="20" height="14" rx="2"/>
+     <path d="M8 21h8M12 17v4"/>
   </svg>`;
 
    const totalEpisodes = series.seasons.reduce((sum, s) => sum + s.episodes.length, 0);
 
-   const el = document.createElement("div");
-   el.className = "content-detail__hero";
-   el.innerHTML = `
-    <div class="content-detail__poster">
-      ${series.poster_url ? `<img src="${series.poster_url}" alt="${series.title}" />` : `<div class="content-detail__poster-icon">${SERIES_ICON}</div>`}
-    </div>
-    <div class="content-detail__info">
-      <h1>${series.title}</h1>
-      <div class="content-detail__meta">
+   const poster = series.poster_url ? `<img src="${series.poster_url}" alt="${series.title}" />` : `<div class="content-detail__poster-icon">${SERIES_ICON}</div>`;
+
+   const meta = `
+     <div class="content-detail__meta">
         <span class="content-detail__rating">${formatRating(series.rating)}/10</span>
         <span class="content-detail__dot"></span>
         <span>${series.release_year}</span>
@@ -64,17 +59,41 @@ function renderSerialHero(series: SeriesDetail): HTMLElement {
         <span class="content-detail__dot"></span>
         <span>Сезонів: ${series.seasons.length}</span>
         <span class="content-detail__dot"></span>
-        <span>Серій: ${totalEpisodes} </span>
-      </div>
-      <div class="content-detail__genres">
-        ${series.genres.map((g) => `<span class="badge badge--genre">${g}</span>`).join("|")}
-      </div>
-      ${series.description ? `<p class="content-detail__description">${series.description}</p>` : ""}
-      <div class="content-detail__crew">
+        <span>Серій: ${totalEpisodes}</span>
+     </div>
+  `;
+
+   const genres = `
+     <div class="content-detail__genres">
+        ${series.genres.map((g) => `<span class="badge badge--genre">${g}</span>`).join("")}
+     </div>
+  `;
+
+   const crew = `
+     <div class="content-detail__crew">
         ${series.directors.length ? `<div>Режисер: <span>${series.directors.join(", ")}</span></div>` : ""}
         ${series.actors.length ? `<div>Актори: <span>${series.actors.join(", ")}</span></div>` : ""}
-      </div>
-    </div>
+     </div>
+  `;
+
+   const el = document.createElement("div");
+   el.className = "content-detail__hero";
+   el.innerHTML = `
+     <div class="content-detail__top">
+        <div class="content-detail__poster">${poster}</div>
+        <div class="content-detail__short-meta">
+           <h1>${series.title}</h1>
+           ${meta}
+           ${genres}
+        </div>
+     </div>
+     <div class="content-detail__info">
+        <h1>${series.title}</h1>
+        ${meta}
+        ${genres}
+        ${series.description ? `<p class="content-detail__description">${series.description}</p>` : ""}
+        ${crew}
+     </div>
   `;
 
    return el;
