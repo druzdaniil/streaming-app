@@ -1,5 +1,3 @@
-// pages/serial.ts
-
 import { getOneSeries, getEpisode } from "../api/content";
 import { getReviews } from "../api/reviews";
 import { renderLoader, createPage } from "../components/page";

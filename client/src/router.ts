@@ -20,7 +20,7 @@ function addRoute(path: string, render: PageRenderer, isProtected = false): void
             paramNames.push(name);
             return "([^/]+)";
          }) +
-         "$"
+         "$",
    );
    routes.push({ pattern, paramNames, render, guarded: isProtected });
 }

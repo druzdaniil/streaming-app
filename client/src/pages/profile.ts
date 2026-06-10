@@ -1,5 +1,3 @@
-// pages/profile.ts
-
 import { getMe } from "../api/auth";
 import { getSubscriptions, getStatus, activate } from "../api/subscription";
 import { setUser } from "../utils/store";

@@ -1,5 +1,3 @@
-// pages/register.ts
-
 import { register } from "../api/auth";
 import { navigate } from "../router";
 import { isLoggedIn } from "../utils/store";
@@ -61,7 +59,7 @@ export async function renderRegister(): Promise<HTMLElement> {
           </div>
           <div class="form-group">
             <label for="password">Пароль</label>
-            <input class="input" type="password" id="password" name="password" placeholder="Введіть пароль (мінімум 6 символів)..." />
+            <input class="input" type="password" id="password" name="password" placeholder="Мінімум 8 символів (літери, цифри та спец. символи)..." />
           </div>
           <button type="submit" class="btn btn--primary auth-form__submit" id="submit-btn">
             Створити акаунт

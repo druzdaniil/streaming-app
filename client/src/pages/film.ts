@@ -1,5 +1,3 @@
-// pages/film.ts
-
 import { getFilm } from "../api/content";
 import { getReviews } from "../api/reviews";
 import { renderLoader, createPage } from "../components/page";

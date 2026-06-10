@@ -1,5 +1,3 @@
-// pages/home.ts
-
 import { getFilms, getSeries, getGenres } from "../api/content";
 import { renderContentCard } from "../components/content-card";
 import { renderLoader, createPage } from "../components/page";
