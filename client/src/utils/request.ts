@@ -5,6 +5,8 @@ export class ApiException extends Error {
    constructor(
       public readonly status: number,
       message: string,
+      public readonly required_subscription?: string,
+      public readonly content_title?: string,
    ) {
       super(message);
       this.name = "ApiException";
@@ -42,11 +44,20 @@ export async function request<T>(url: string, options: RequestOptions = {}): Pro
       }
 
       let message = `HTTP ${response.status}`;
+      let required_subscription: string | undefined;
+      let content_title: string | undefined;
+
       try {
-         const err = (await response.json()) as ApiError;
+         const err = (await response.json()) as ApiError & {
+            required_subscription?: string;
+            content_title?: string;
+         };
          if (err.error) message = err.error;
+         required_subscription = err.required_subscription;
+         content_title = err.content_title;
       } catch {}
-      throw new ApiException(response.status, message);
+
+      throw new ApiException(response.status, message, required_subscription, content_title);
    }
 
    if (response.status === 204) {
