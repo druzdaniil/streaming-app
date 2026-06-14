@@ -291,7 +291,8 @@ VALUES
    (9, 'Жахи'),
    (10, 'Біографічний'),
    (11, 'Історичний'),
-   (12, 'Детектив');
+   (12, 'Детектив'),
+   (13, 'Анімація');
 
 DELETE FROM content_directors;
 
@@ -412,6 +413,26 @@ VALUES
       25,
       'Девід Фінчер',
       'Американський режисер, майстер психологічних трилерів.'
+   ),
+   (
+      26,
+      'Майкл Данте ДіМартіно',
+      'Американський мультиплікатор і сценарист, співстворювач серіалу «Аватар: Останній маг повітря».'
+   ),
+   (
+      27,
+      'Браян Коньєцко',
+      'Американський аніматор, співстворювач серіалу «Аватар: Останній маг повітря».'
+   ),
+   (
+      28,
+      'Лін-Мануель Міранда',
+      'Американський режисер, актор та композитор, відомий своїми мюзиклами.'
+   ),
+   (
+      29,
+      'Мел Гібсон',
+      'Австралійсько-американський актор і режисер, зняв «З міркувань совісті».'
    );
 
 DELETE FROM content_actors;
@@ -526,6 +547,146 @@ VALUES
       26,
       'Том Харді',
       'Британський актор, відомий різноплановими ролями.'
+   ),
+   (
+      27,
+      'Зак Тайлер Айзен',
+      'Американський актор озвучення, відомий роллю Аанга у серіалі «Аватар: Останній маг повітря».'
+   ),
+   (
+      28,
+      'Мей Вітман',
+      'Американська актриса, відома озвученням Катари в «Аватар: Останній маг повітря».'
+   ),
+   (
+      29,
+      'Ліам Нісон',
+      'Ірландський актор, відомий роллю Оскара Шиндлера у «Списку Шиндлера».'
+   ),
+   (
+      30,
+      'Бен Кінґслі',
+      'Британський актор, лауреат премії Оскар, відомий роллю в «Списку Шиндлера».'
+   ),
+   (
+      31,
+      'Ральф Файнс',
+      'Британський актор, відомий ролями у «Списку Шиндлера» та серії «Гаррі Поттер».'
+   ),
+   (
+      32,
+      'Ендрю Ґарфілд',
+      'Британсько-американський актор, відомий ролями у «З міркувань совісті» та «Тік-так... Бум!».'
+   ),
+   (
+      33,
+      'Сем Вортінґтон',
+      'Австралійський актор, відомий роллю у «З міркувань совісті» та «Аватарі».'
+   ),
+   (
+      34,
+      'Робін Райт',
+      'Американська актриса, відома роллю Дженні у «Форрест Гамп».'
+   ),
+   (
+      35,
+      'Ґері Сайніз',
+      'Американський актор, зіграв лейтенанта Дена у «Форрест Гамп».'
+   ),
+   (
+      36,
+      'Білл Пекстон',
+      'Американський актор, зіграв Брока Ловетта у «Титаніку».'
+   ),
+   (
+      37,
+      'Джозеф Ґордон-Левітт',
+      'Американський актор, відомий роллю Артура у «Початку».'
+   ),
+   (
+      38,
+      'Енн Гетевей',
+      'Американська актриса, зіграла Бренд у «Інтерстеллар».'
+   ),
+   (
+      39,
+      'Морґан Фрімен',
+      'Американський актор, зіграв Реда у «Втечі з Шоушенка» та Вітрувія у «Лего. Фільм».'
+   ),
+   (
+      40,
+      'Зазі Бітц',
+      'Американська актриса, зіграла Софі Дюмон у «Джокері».'
+   ),
+   (
+      41,
+      'Джош Гатчерсон',
+      'Американський актор, зіграв Піта Мелларка у «Голодних іграх».'
+   ),
+   (
+      42,
+      'Ґвінет Пелтроу',
+      'Американська актриса, зіграла Пеппер Поттс у «Залізній людині».'
+   ),
+   (
+      43,
+      'Лоуренс Фішберн',
+      'Американський актор, зіграв Морфеуса у «Матриці».'
+   ),
+   (
+      44,
+      'Марк Руффало',
+      'Американський актор, відомий роллю у «Острові проклятих» та серії «Месники».'
+   ),
+   (
+      45,
+      'Сем Ніл',
+      'Новозеландський актор, зіграв доктора Ґранта у «Парку Юрського Періоду».'
+   ),
+   (
+      46,
+      'Джим Керрі',
+      'Американський актор і комік, зіграв Джоела у «Вічному сяйві чистого розуму».'
+   ),
+   (
+      47,
+      'Кріс Пратт',
+      'Американський актор, озвучив Еметта у «Лего. Фільм».'
+   ),
+   (
+      48,
+      'Елізабет Бенкс',
+      'Американська актриса, озвучила Вайлдстайл у «Лего. Фільм».'
+   ),
+   (
+      49,
+      'Тільда Свінтон',
+      'Британська акторка, зіграла Стародавню у «Доктор Стрендж».'
+   ),
+   (
+      50,
+      'Меґан Фокс',
+      'Американська актриса, відома роллю Майкали у франшизі «Трансформери».'
+   ),
+   (
+      51,
+      'Джеймс Макевой',
+      'Шотландський актор, зіграв молодого Чарльза Ксавʼєра у «Людях Ікс: Перший клас».'
+   ),
+   (
+      52,
+      'Пол Андерсон',
+      'Британський актор, зіграв Артура Шелбі у «Гострих картузах».'
+   ),
+   (
+      53,
+      'Олександра Шіп',
+      'Американська актриса, зіграла Сьюзан Лоуренс у «Тік-так... Бум!».'
+   ),
+   (
+      54,
+      'Г''юґо Вівінґ',
+      'Австралійський актор, відомий роллю Сержанта Гауелла у «З міркувань совісті».'
    );
 
 DELETE FROM episodes;
@@ -595,7 +756,7 @@ VALUES
    (
       2,
       194,
-      'https://res.cloudinary.com/demo/video/upload/titanic_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354623/titanic_trailer_rb6xja.mp4'
    );
 
 INSERT INTO
@@ -625,7 +786,7 @@ VALUES
    (
       3,
       148,
-      'https://res.cloudinary.com/demo/video/upload/inception_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354596/inception_trailer_pu3stu.mp4'
    );
 
 INSERT INTO
@@ -645,7 +806,7 @@ VALUES
       'Інтерстеллар',
       2014,
       'Команда астронавтів вирушає крізь червоточину в пошуках нового дому для людства.',
-      8.6,
+      8.7,
       'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159971/interstellar_wif2ss.jpg'
    );
 
@@ -655,7 +816,7 @@ VALUES
    (
       4,
       169,
-      'https://res.cloudinary.com/demo/video/upload/interstellar_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354626/interstellar_trailer_dupvam.mp4'
    );
 
 INSERT INTO
@@ -685,7 +846,7 @@ VALUES
    (
       5,
       122,
-      'https://res.cloudinary.com/demo/video/upload/joker_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354633/joker_trailer_jrbcxq.mp4'
    );
 
 INSERT INTO
@@ -715,7 +876,7 @@ VALUES
    (
       6,
       142,
-      'https://res.cloudinary.com/demo/video/upload/shawshank_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354636/shawshank_trailer_scoyfi.mp4'
    );
 
 INSERT INTO
@@ -745,7 +906,7 @@ VALUES
    (
       7,
       142,
-      'https://res.cloudinary.com/demo/video/upload/hunger_games_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354638/hunger_games_trailer_zden0m.mp4'
    );
 
 INSERT INTO
@@ -775,7 +936,7 @@ VALUES
    (
       8,
       126,
-      'https://res.cloudinary.com/demo/video/upload/iron_man_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354628/iron_man_trailer_pz5asz.mp4'
    );
 
 INSERT INTO
@@ -795,7 +956,7 @@ VALUES
       'Матриця',
       1999,
       'Хакер дізнається, що реальність є комп''ютерною симуляцією, і приєднується до повстання проти машин.',
-      8.7,
+      8.6,
       'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159974/matrix_edw16b.jpg'
    );
 
@@ -805,7 +966,7 @@ VALUES
    (
       9,
       136,
-      'https://res.cloudinary.com/demo/video/upload/matrix_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354636/matrix_trailer_n9gtgg.mp4'
    );
 
 INSERT INTO
@@ -825,7 +986,7 @@ VALUES
       'Острів проклятих',
       2010,
       'Двоє федеральних маршалів розслідують зникнення пацієнтки з ізольованої психіатричної лікарні.',
-      8.1,
+      8.2,
       'https://res.cloudinary.com/ddlxntp79/image/upload/v1780159977/shutter_island_otk7ej.jpg'
    );
 
@@ -835,7 +996,7 @@ VALUES
    (
       10,
       138,
-      'https://res.cloudinary.com/demo/video/upload/shutter_island_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354622/shutter_island_trailer_eihv0g.mp4'
    );
 
 INSERT INTO
@@ -865,7 +1026,7 @@ VALUES
    (
       11,
       127,
-      'https://res.cloudinary.com/demo/video/upload/jurassic_park_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354630/jurassic_park_trailer_p0ccmv.mp4'
    );
 
 INSERT INTO
@@ -895,7 +1056,7 @@ VALUES
    (
       12,
       108,
-      'https://res.cloudinary.com/demo/video/upload/eternal_sunshine_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354637/eternal_sunshine_trailer_s5cqm5.mp4'
    );
 
 INSERT INTO
@@ -925,7 +1086,7 @@ VALUES
    (
       13,
       100,
-      'https://res.cloudinary.com/demo/video/upload/lego_movie_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354634/lego_movie_trailer_vmqpva.mp4'
    );
 
 INSERT INTO
@@ -955,7 +1116,7 @@ VALUES
    (
       14,
       115,
-      'https://res.cloudinary.com/demo/video/upload/doctor_strange_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354619/doctor_strange_trailer_bmdouk.mp4'
    );
 
 INSERT INTO
@@ -985,7 +1146,7 @@ VALUES
    (
       15,
       144,
-      'https://res.cloudinary.com/demo/video/upload/transformers_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354654/transformers_trailer_oavcw0.mp4'
    );
 
 INSERT INTO
@@ -1015,7 +1176,7 @@ VALUES
    (
       16,
       99,
-      'https://res.cloudinary.com/demo/video/upload/annabelle_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354617/annabelle_trailer_iwrr0l.mp4'
    );
 
 INSERT INTO
@@ -1035,7 +1196,7 @@ VALUES
       'Пан Робот',
       2015,
       'Параноїдальний хакер вступає до підпільної групи, яка планує знищити найбільшу корпорацію у світі.',
-      8.7,
+      8.8,
       'https://res.cloudinary.com/ddlxntp79/image/upload/v1780160992/mr_robot_drprgf.jpg'
    );
 
@@ -1204,21 +1365,21 @@ VALUES
       1,
       'Пілот',
       58,
-      'https://res.cloudinary.com/demo/video/upload/bb_s1e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372485/brba_s1e1_povunz.mp4'
    ),
    (
       5,
       2,
       'Кіт у мішку...',
       48,
-      'https://res.cloudinary.com/demo/video/upload/bb_s1e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372495/brba_s1e2_yhpebj.mp4'
    ),
    (
       5,
       3,
       '...А мішок у річці',
       48,
-      'https://res.cloudinary.com/demo/video/upload/bb_s1e3.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372486/brba_s1e3_bqdjis.mp4'
    );
 
 INSERT INTO
@@ -1235,14 +1396,14 @@ VALUES
       1,
       'Сімсот тридцять сім',
       47,
-      'https://res.cloudinary.com/demo/video/upload/bb_s2e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372507/brba_s2e1_qcdqmm.mp4'
    ),
    (
       6,
       2,
       'Смажений',
       48,
-      'https://res.cloudinary.com/demo/video/upload/bb_s2e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372507/brba_s2e1_qcdqmm.mp4'
    );
 
 INSERT INTO
@@ -1259,14 +1420,14 @@ VALUES
       1,
       'No Más',
       47,
-      'https://res.cloudinary.com/demo/video/upload/bb_s3e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372504/brba_s3e1_ssgzwo.mp4'
    ),
    (
       7,
       2,
       'Caballo sin Nombre',
       48,
-      'https://res.cloudinary.com/demo/video/upload/bb_s3e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372507/brba_s3e2_sln9rj.mp4'
    );
 
 INSERT INTO
@@ -1283,14 +1444,14 @@ VALUES
       1,
       'Різак для коробок',
       47,
-      'https://res.cloudinary.com/demo/video/upload/bb_s4e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372486/brba_s4e1_coffz2.mp4'
    ),
    (
       8,
       2,
       'Тридцять вісім кирпатих',
       46,
-      'https://res.cloudinary.com/demo/video/upload/bb_s4e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372486/brba_s4e2_tmlwkl.mp4'
    );
 
 INSERT INTO
@@ -1307,14 +1468,14 @@ VALUES
       1,
       'Живи вільно або помри',
       43,
-      'https://res.cloudinary.com/demo/video/upload/bb_s5e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372508/brba_s5e1_ljwaxi.mp4'
    ),
    (
       9,
       2,
       'Мадригал',
       46,
-      'https://res.cloudinary.com/demo/video/upload/bb_s5e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372511/brba_s5e2_ouayqx.mp4'
    );
 
 INSERT INTO
@@ -1334,7 +1495,7 @@ VALUES
       'Краще подзвоніть Солу',
       2015,
       'Передісторія «Пуститися берега»: як невдаха-адвокат Джиммі Макгілл перетворюється на аферистського Солу Ґудмена.',
-      8.8,
+      9.0,
       'https://res.cloudinary.com/ddlxntp79/image/upload/v1780160991/better_call_saul_dptzuq.jpg'
    );
 
@@ -1367,14 +1528,14 @@ VALUES
       1,
       'Уно',
       53,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s1e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372496/bcs_s1e1_ih4rsx.mp4'
    ),
    (
       10,
       2,
       'Мійо',
       46,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s1e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372498/bcs_s1e2_clst5o.mp4'
    );
 
 INSERT INTO
@@ -1391,14 +1552,14 @@ VALUES
       1,
       'Перемикач',
       46,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s2e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372497/bsc_s2e1_zxequj.mp4'
    ),
    (
       11,
       2,
       'Латач',
       47,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s2e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372488/bsc_s2e2_ybkxfz.mp4'
    );
 
 INSERT INTO
@@ -1415,14 +1576,14 @@ VALUES
       1,
       'Мейбл',
       51,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s3e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372499/bsc_s3e1_genjbo.mp4'
    ),
    (
       12,
       2,
       'Свідок',
       51,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s3e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372501/bsc_s3e2_p3ncoh.mp4'
    );
 
 INSERT INTO
@@ -1439,14 +1600,14 @@ VALUES
       1,
       'Дим',
       49,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s4e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372489/bsc_s4e1_hvqtjh.mp4'
    ),
    (
       13,
       2,
       'Дихати',
       45,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s4e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372494/bsc_s4e2_uhcvb7.mp4'
    );
 
 INSERT INTO
@@ -1463,14 +1624,14 @@ VALUES
       1,
       'Чарівник',
       54,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s5e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372489/bsc_s5e1_swjjlg.mp4'
    ),
    (
       14,
       2,
       'Знижка 50%',
       46,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s5e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372491/bsc_s5e2_x9gat7.mp4'
    );
 
 INSERT INTO
@@ -1487,14 +1648,14 @@ VALUES
       1,
       'Вино та Троянди',
       60,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s6e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372495/bsc_s6e1_rqbbqh.mp4'
    ),
    (
       15,
       2,
       'Батіг і Пряник',
       61,
-      'https://res.cloudinary.com/demo/video/upload/bcs_s6e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372495/bsc_s6e2_bluacn.mp4'
    );
 
 INSERT INTO
@@ -1514,7 +1675,7 @@ VALUES
       'Гострі картузи',
       2013,
       'Кримінальна сага про гангстерську родину Шелбі у Бірмінгемі після Першої світової війни.',
-      8.8,
+      8.6,
       'https://res.cloudinary.com/ddlxntp79/image/upload/v1780160993/peaky_blinders_pogylc.jpg'
    );
 
@@ -1547,21 +1708,21 @@ VALUES
       1,
       'Епізод #1.1',
       58,
-      'https://res.cloudinary.com/demo/video/upload/pb_s1e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372463/pb_s1e1_dyxdko.mp4'
    ),
    (
       16,
       2,
       'Епізод #1.2',
       58,
-      'https://res.cloudinary.com/demo/video/upload/pb_s1e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372464/pb_s1e2_nrka3y.mp4'
    ),
    (
       16,
       3,
       'Епізод #1.3',
       56,
-      'https://res.cloudinary.com/demo/video/upload/pb_s1e3.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372464/pb_s1e3_b8k4zi.mp4'
    );
 
 INSERT INTO
@@ -1578,14 +1739,14 @@ VALUES
       1,
       'Епізод #2.1',
       59,
-      'https://res.cloudinary.com/demo/video/upload/pb_s2e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372467/pb_s2e1_zcuccc.mp4'
    ),
    (
       17,
       2,
       'Епізод #2.2',
       58,
-      'https://res.cloudinary.com/demo/video/upload/pb_s2e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372470/pb_s2e2_ohyii3.mp4'
    );
 
 INSERT INTO
@@ -1602,14 +1763,14 @@ VALUES
       1,
       'Епізод #3.1',
       56,
-      'https://res.cloudinary.com/demo/video/upload/pb_s3e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372476/pb_s3e1_lhkouz.mp4'
    ),
    (
       18,
       2,
       'Епізод #3.2',
       57,
-      'https://res.cloudinary.com/demo/video/upload/pb_s3e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372481/pb_s3e2_kuaveb.mp4'
    );
 
 INSERT INTO
@@ -1626,14 +1787,14 @@ VALUES
       1,
       'Петля',
       60,
-      'https://res.cloudinary.com/demo/video/upload/pb_s4e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372465/pb_s4e1_vxzule.mp4'
    ),
    (
       19,
       2,
       'Язичники',
       57,
-      'https://res.cloudinary.com/demo/video/upload/pb_s4e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372473/pb_s4e2_h8zcz8.mp4'
    );
 
 INSERT INTO
@@ -1650,14 +1811,14 @@ VALUES
       1,
       'Чорний вівторок',
       56,
-      'https://res.cloudinary.com/demo/video/upload/pb_s5e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372472/pb_s5e1_ovysj1.mp4'
    ),
    (
       20,
       2,
       'Чорні коти',
       58,
-      'https://res.cloudinary.com/demo/video/upload/pb_s5e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372473/pb_s5e2_q0j4js.mp4'
    );
 
 INSERT INTO
@@ -1674,14 +1835,14 @@ VALUES
       1,
       'Чорний день',
       58,
-      'https://res.cloudinary.com/demo/video/upload/pb_s6e1.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372467/pb_s6e1_nnzils.mp4'
    ),
    (
       21,
       2,
       'Чорна сорочка',
       59,
-      'https://res.cloudinary.com/demo/video/upload/pb_s6e2.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372470/pb_s6e2_nkykbp.mp4'
    );
 
 INSERT INTO
@@ -1711,7 +1872,202 @@ VALUES
    (
       21,
       131,
-      'https://res.cloudinary.com/demo/video/upload/xmen_first_class_trailer.mp4'
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781354628/xmen_first_class_trailer_h00pwd.mp4'
+   );
+
+INSERT INTO
+   content (
+      content_id,
+      content_type,
+      title,
+      release_year,
+      description,
+      rating,
+      poster_url
+   )
+VALUES
+   (
+      22,
+      'series',
+      'Аватар: Останній маг повітря',
+      2005,
+      'У світі, розділеному між чотирма народами стихій, юний Аанг пробуджується після сотні років сну, щоб виконати своє призначення Аватара і принести мир.',
+      9.3,
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1781393152/atla_dukqyq.jpg'
+   );
+
+INSERT INTO
+   series (series_id)
+VALUES
+   (22);
+
+INSERT INTO
+   seasons (series_id, season_number, title)
+VALUES
+   (22, 1, 'Книга Перша: Вода'),
+   (22, 2, 'Книга Друга: Земля'),
+   (22, 3, 'Книга Третя: Вогонь');
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      22,
+      1,
+      'Хлопець у крижаній брилі',
+      23,
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372487/atla_s1e1_z3ysl0.mp4'
+   ),
+   (
+      22,
+      2,
+      'Повернення Аватара',
+      23,
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372487/atla_s1e1_z3ysl0.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      23,
+      1,
+      'Стан Аватару',
+      23,
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372492/atla_s2e1_ersspb.mp4'
+   ),
+   (
+      23,
+      2,
+      'Печери двох закоханих',
+      23,
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372493/atla_s2e2_who2qn.mp4'
+   );
+
+INSERT INTO
+   episodes (
+      season_id,
+      episode_number,
+      title,
+      duration,
+      video_url
+   )
+VALUES
+   (
+      24,
+      1,
+      'Пробудження',
+      23,
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372501/atla_s3e1_krqo0u.mp4'
+   ),
+   (
+      24,
+      2,
+      'Пов''язка на голову',
+      23,
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781372508/atla_s3e2_kfknt7.mp4'
+   );
+
+INSERT INTO
+   content (
+      content_id,
+      content_type,
+      title,
+      release_year,
+      description,
+      rating,
+      poster_url
+   )
+VALUES
+   (
+      23,
+      'film',
+      'Список Шиндлера',
+      1993,
+      'Німецький промисловець Оскар Шиндлер під час Голокосту рятує більше тисячі польських євреїв, наймаючи їх на свій завод.',
+      9.0,
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1781393234/shindlers_list_tlcimh.jpg'
+   );
+
+INSERT INTO
+   films (film_id, duration, video_url)
+VALUES
+   (
+      23,
+      195,
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781393354/schindlers_list_trailer_wcvhwm.mp4'
+   );
+
+INSERT INTO
+   content (
+      content_id,
+      content_type,
+      title,
+      release_year,
+      description,
+      rating,
+      poster_url
+   )
+VALUES
+   (
+      24,
+      'film',
+      'Тік-так... Бум!',
+      2021,
+      'Напередодні 30-річчя талановитий бродвейський композитор Джонатан Ларсон балансує між коханням, дружбою та тиском часу у боротьбі за своє місце у світі мистецтва.',
+      7.5,
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1781393245/tick_tick_boom_qjsbrf.jpg'
+   );
+
+INSERT INTO
+   films (film_id, duration, video_url)
+VALUES
+   (
+      24,
+      121,
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781393342/tick_tick_boom_trailer_v52euf.mp4'
+   );
+
+INSERT INTO
+   content (
+      content_id,
+      content_type,
+      title,
+      release_year,
+      description,
+      rating,
+      poster_url
+   )
+VALUES
+   (
+      25,
+      'film',
+      'З міркувань совісті',
+      2016,
+      'Медик армії США Десмонд Досс відмовляється брати зброю, проте у битві за Окінаву рятує 75 поранених солдатів — і стає першим ідейним ухилянтом, нагородженим Медаллю Пошани.',
+      8.1,
+      'https://res.cloudinary.com/ddlxntp79/image/upload/v1781393227/hacksaw_ridge_raprj6.jpg'
+   );
+
+INSERT INTO
+   films (film_id, duration, video_url)
+VALUES
+   (
+      25,
+      139,
+      'https://res.cloudinary.com/ddlxntp79/video/upload/v1781393364/hacksaw_ridge_trailer_phcfuc.mp4'
    );
 
 INSERT INTO
@@ -1722,6 +2078,7 @@ VALUES
    (2, 3),
    (3, 2),
    (3, 4),
+   (3, 6),
    (4, 2),
    (4, 1),
    (5, 1),
@@ -1748,15 +2105,26 @@ VALUES
    (15, 5),
    (16, 9),
    (17, 4),
-   (17, 12),
    (18, 1),
    (18, 4),
    (19, 1),
-   (19, 12),
+   (19, 3),
    (20, 1),
-   (20, 12),
    (21, 6),
-   (21, 5);
+   (21, 5),
+   (22, 13),
+   (22, 8),
+   (22, 5),
+   (22, 6),
+   (23, 1),
+   (23, 10),
+   (23, 11),
+   (24, 1),
+   (24, 10),
+   (24, 7),
+   (25, 1),
+   (25, 10),
+   (25, 11);
 
 INSERT INTO
    content_directors (content_id, director_id)
@@ -1782,7 +2150,12 @@ VALUES
    (17, 2),
    (18, 9),
    (19, 9),
-   (21, 18);
+   (21, 18),
+   (22, 26),
+   (22, 27),
+   (23, 20),
+   (24, 28),
+   (25, 29);
 
 INSERT INTO
    content_actors (content_id, actor_id)
@@ -1808,7 +2181,38 @@ VALUES
    (18, 5),
    (19, 12),
    (20, 21),
-   (21, 16);
+   (21, 16),
+   (22, 27),
+   (22, 28),
+   (23, 29),
+   (23, 30),
+   (23, 31),
+   (24, 32),
+   (25, 32),
+   (25, 33),
+   (1, 34),
+   (1, 35),
+   (2, 36),
+   (3, 37),
+   (4, 38),
+   (5, 40),
+   (6, 39),
+   (7, 41),
+   (8, 42),
+   (9, 43),
+   (10, 44),
+   (11, 45),
+   (12, 46),
+   (13, 47),
+   (13, 48),
+   (13, 39),
+   (14, 49),
+   (15, 50),
+   (20, 52),
+   (21, 51),
+   (24, 53),
+   (25, 54),
+   (12, 2);
 
 DELETE FROM reviews;
 
@@ -2048,4 +2452,36 @@ VALUES
       'Середній фільм, нічого особливого',
       6,
       '2026-03-15 10:00:00'
+   ),
+   (
+      33,
+      5,
+      22,
+      'Найкращий анімаційний серіал, який я бачила. Глибина персонажів вражає!',
+      10,
+      '2026-04-01 12:00:00'
+   ),
+   (
+      34,
+      11,
+      23,
+      'Важкий, але необхідний фільм. Спілберг зняв справжній шедевр.',
+      10,
+      '2026-04-03 15:00:00'
+   ),
+   (
+      35,
+      6,
+      24,
+      'Музика та акторська гра Ґарфілда — просто неймовірні.',
+      9,
+      '2026-04-05 18:00:00'
+   ),
+   (
+      36,
+      13,
+      25,
+      'Потужна історія про силу переконань. Дивитися обовʼязково.',
+      9,
+      '2026-04-07 20:00:00'
    );
